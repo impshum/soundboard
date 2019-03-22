@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound Board</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <style>
+    * {
+      transition: .5s;
+    }
+    body {
+        opacity: 1;
+        transition: .5s opacity;
+    }
+    body.fade-out {
+        opacity: 0;
+        transition: none;
+    }
+    html {
+      background: #000;
+    }
+    .playing {
+      opacity: .5;
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="yey">
+
+  <script>document.body.className += ' fade-out';</script>
+
+  <audio id="a_1">
+    <source src="sounds/90_years_old.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_2">
+    <source src="sounds/1940_something.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_3">
+    <source src="sounds/And_now_we_have_one.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_4">
+    <source src="sounds/Are_You_Kidding_Me.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_5">
+    <source src="sounds/bensoninterview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_6">
+    <source src="sounds/But_um,.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_7">
+    <source src="sounds/Darn_Right.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_8">
+    <source src="sounds/Folk_Music.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_9">
+    <source src="sounds/I_was_19_years_old.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_10">
+    <source src="sounds/Its_gorgeous.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_11">
+    <source src="sounds/Jerry_Lee_Rant.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_12">
+    <source src="sounds/Long_Ray_Interview.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_13">
+    <source src="sounds/Mic_Placement_rant.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_14">
+    <source src="sounds/My_name_is_Ray_Benson.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_15">
+    <source src="sounds/Oh_yeah,_me_too.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_16">
+    <source src="sounds/Sports_Rant.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_17">
+    <source src="sounds/try_to_figure_that_out.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_18">
+    <source src="sounds/Uh,_but_anyway....mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_19">
+    <source src="sounds/Very_Funny.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="a_20">
+    <source src="sounds/When_I_was_15.mp3" type="audio/mpeg">
+  </audio>
+
+  <section class="section">
+    <div class="container is-fluid">
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-3" id="i_1">
+          <img src="https://via.placeholder.com/350x130.png?text=90+years+old" onclick="p1()">
+        </div>
+        <div class="column is-3" id="i_2">
+          <img src="https://via.placeholder.com/350x130.png?text=1940+something" onclick="p2()">
+        </div>
+        <div class="column is-3" id="i_3">
+          <img src="https://via.placeholder.com/350x130.png?text=And+now+we+have+one" onclick="p3()">
+        </div>
+        <div class="column is-3" id="i_4">
+          <img src="https://via.placeholder.com/350x130.png?text=Are+you+kidding+me" onclick="p4()">
+        </div>
+        <div class="column is-3" id="i_5">
+          <img src="https://via.placeholder.com/350x130.png?text=Benson+interview" onclick="p5()">
+        </div>
+        <div class="column is-3" id="i_6">
+          <img src="https://via.placeholder.com/350x130.png?text=But+um" onclick="p6()">
+        </div>
+        <div class="column is-3" id="i_7">
+          <img src="https://via.placeholder.com/350x130.png?text=Darn+right" onclick="p7()">
+        </div>
+        <div class="column is-3" id="i_8">
+          <img src="https://via.placeholder.com/350x130.png?text=Folk+music" onclick="p8()">
+        </div>
+        <div class="column is-3" id="i_9">
+          <img src="https://via.placeholder.com/350x130.png?text=I+was+19+years+old" onclick="p9()">
+        </div>
+        <div class="column is-3" id="i_10">
+          <img src="https://via.placeholder.com/350x130.png?text=Its+gorgeous" onclick="p10()">
+        </div>
+        <div class="column is-3" id="i_11">
+          <img src="https://via.placeholder.com/350x130.png?text=Jerry+Lee+rant" onclick="p11()">
+        </div>
+        <div class="column is-3" id="i_12">
+          <img src="https://via.placeholder.com/350x130.png?text=Long+Ray+interview" onclick="p12()">
+        </div>
+        <div class="column is-3" id="i_13">
+          <img src="https://via.placeholder.com/350x130.png?text=Mic+placement+rant" onclick="p13()">
+        </div>
+        <div class="column is-3" id="i_14">
+          <img src="https://via.placeholder.com/350x130.png?text=My+name+is+Ray+Benson" onclick="p14()">
+        </div>
+        <div class="column is-3" id="i_15">
+          <img src="https://via.placeholder.com/350x130.png?text=Oh+yeah,+me+too" onclick="p15()">
+        </div>
+        <div class="column is-3" id="i_16">
+          <img src="https://via.placeholder.com/350x130.png?text=Sports+rant" onclick="p16()">
+        </div>
+        <div class="column is-3" id="i_17">
+          <img src="https://via.placeholder.com/350x130.png?text=try+to+figure+that+out" onclick="p17()">
+        </div>
+        <div class="column is-3" id="i_18">
+          <img src="https://via.placeholder.com/350x130.png?text=Uh,+but+anyway..." onclick="p18()">
+        </div>
+        <div class="column is-3" id="i_19">
+          <img src="https://via.placeholder.com/350x130.png?text=Very+funny" onclick="p19()">
+        </div>
+        <div class="column is-3" id="i_20">
+          <img src="https://via.placeholder.com/350x130.png?text=When+I+was+15" onclick="p20()">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function r(f) {
+      /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f()
+    }
+
+    r(function() {
+      document.getElementById("yey").classList.remove("fade-out");
+    });
+
+    var a_1 = document.getElementById('a_1');
+    var i_1 = document.getElementById('i_1');
+
+    function p1() {
+      a_1.play();
+      i_1.classList.add('playing');
+    }
+    a_1.onended = function() {
+      i_1.classList.remove('playing');
+    };
+
+    var a_2 = document.getElementById('a_2');
+    var i_2 = document.getElementById('i_2');
+
+    function p2() {
+      a_2.play();
+      i_2.classList.add('playing');
+    }
+    a_2.onended = function() {
+      i_2.classList.remove('playing');
+    };
+
+    var a_3 = document.getElementById('a_3');
+    var i_3 = document.getElementById('i_3');
+
+    function p3() {
+      a_3.play();
+      i_3.classList.add('playing');
+    }
+    a_3.onended = function() {
+      i_3.classList.remove('playing');
+    };
+
+    var a_4 = document.getElementById('a_4');
+    var i_4 = document.getElementById('i_4');
+
+    function p4() {
+      a_4.play();
+      i_4.classList.add('playing');
+    }
+    a_4.onended = function() {
+      i_4.classList.remove('playing');
+    };
+
+    var a_5 = document.getElementById('a_5');
+    var i_5 = document.getElementById('i_5');
+
+    function p5() {
+      a_5.play();
+      i_5.classList.add('playing');
+    }
+    a_5.onended = function() {
+      i_5.classList.remove('playing');
+    };
+
+    var a_6 = document.getElementById('a_6');
+    var i_6 = document.getElementById('i_6');
+
+    function p6() {
+      a_6.play();
+      i_6.classList.add('playing');
+    }
+    a_6.onended = function() {
+      i_6.classList.remove('playing');
+    };
+
+    var a_7 = document.getElementById('a_7');
+    var i_7 = document.getElementById('i_7');
+
+    function p7() {
+      a_7.play();
+      i_7.classList.add('playing');
+    }
+    a_7.onended = function() {
+      i_7.classList.remove('playing');
+    };
+
+    var a_8 = document.getElementById('a_8');
+    var i_8 = document.getElementById('i_8');
+
+    function p8() {
+      a_8.play();
+      i_8.classList.add('playing');
+    }
+    a_8.onended = function() {
+      i_8.classList.remove('playing');
+    };
+
+    var a_9 = document.getElementById('a_9');
+    var i_9 = document.getElementById('i_9');
+
+    function p9() {
+      a_9.play();
+      i_9.classList.add('playing');
+    }
+    a_9.onended = function() {
+      i_9.classList.remove('playing');
+    };
+
+    var a_10 = document.getElementById('a_10');
+    var i_10 = document.getElementById('i_10');
+
+    function p10() {
+      a_10.play();
+      i_10.classList.add('playing');
+    }
+    a_10.onended = function() {
+      i_10.classList.remove('playing');
+    };
+
+    var a_11 = document.getElementById('a_11');
+    var i_11 = document.getElementById('i_11');
+
+    function p11() {
+      a_11.play();
+      i_11.classList.add('playing');
+    }
+    a_11.onended = function() {
+      i_11.classList.remove('playing');
+    };
+
+    var a_12 = document.getElementById('a_12');
+    var i_12 = document.getElementById('i_12');
+
+    function p12() {
+      a_12.play();
+      i_12.classList.add('playing');
+    }
+    a_12.onended = function() {
+      i_12.classList.remove('playing');
+    };
+
+    var a_13 = document.getElementById('a_13');
+    var i_13 = document.getElementById('i_13');
+
+    function p13() {
+      a_13.play();
+      i_13.classList.add('playing');
+    }
+    a_13.onended = function() {
+      i_13.classList.remove('playing');
+    };
+
+    var a_14 = document.getElementById('a_14');
+    var i_14 = document.getElementById('i_14');
+
+    function p14() {
+      a_14.play();
+      i_14.classList.add('playing');
+    }
+    a_14.onended = function() {
+      i_14.classList.remove('playing');
+    };
+
+    var a_15 = document.getElementById('a_15');
+    var i_15 = document.getElementById('i_15');
+
+    function p15() {
+      a_15.play();
+      i_15.classList.add('playing');
+    }
+    a_15.onended = function() {
+      i_15.classList.remove('playing');
+    };
+
+    var a_16 = document.getElementById('a_16');
+    var i_16 = document.getElementById('i_16');
+
+    function p16() {
+      a_16.play();
+      i_16.classList.add('playing');
+    }
+    a_16.onended = function() {
+      i_16.classList.remove('playing');
+    };
+
+    var a_17 = document.getElementById('a_17');
+    var i_17 = document.getElementById('i_17');
+
+    function p17() {
+      a_17.play();
+      i_17.classList.add('playing');
+    }
+    a_17.onended = function() {
+      i_17.classList.remove('playing');
+    };
+
+    var a_18 = document.getElementById('a_18');
+    var i_18 = document.getElementById('i_18');
+
+    function p18() {
+      a_18.play();
+      i_18.classList.add('playing');
+    }
+    a_18.onended = function() {
+      i_18.classList.remove('playing');
+    };
+
+    var a_19 = document.getElementById('a_19');
+    var i_19 = document.getElementById('i_19');
+
+    function p19() {
+      a_19.play();
+      i_19.classList.add('playing');
+    }
+    a_19.onended = function() {
+      i_19.classList.remove('playing');
+    };
+
+    var a_20 = document.getElementById('a_20');
+    var i_20 = document.getElementById('i_20');
+
+    function p20() {
+      a_20.play();
+      i_20.classList.add('playing');
+    }
+    a_20.onended = function() {
+      i_20.classList.remove('playing');
+    };
+  </script>
+
+</body>
+
+</html>
