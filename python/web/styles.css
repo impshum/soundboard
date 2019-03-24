@@ -1,0 +1,58 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eee;
+}
+
+* {
+  transition: .5s;
+}
+
+body {
+  transition: .5s opacity;
+  opacity: 1;
+  background: #000;
+}
+
+body.fade-out {
+  transition: none;
+  opacity: 0;
+}
+
+html {
+  background: #000;
+}
+
+.playing {
+  opacity: .5 !important;
+}
+
+.trigger {
+  opacity: .85;
+}
+
+.trigger:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
+}
+
+#close {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+
+#close:hover {
+  cursor: pointer;
+}

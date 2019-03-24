@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound Board</title>
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="yey">
+
+  <script>
+    document.body.className += ' fade-out';
+  </script>
+
+  <div id="close" onclick="window.open('', '_self', ''); window.close();">EXIT</div>
+
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div id="triggers" class="columns is-multiline is-mobile"></div>
+        <div id="audios"></div>
+      </div>
+    </div>
+  </section>
+
+  <script src="jquery.js"></script>
+  <script type="text/javascript" src="/eel.js"></script>
+  <script>
+    function r(f) {
+      /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f()
+    }
+    r(function() {
+      document.getElementById("yey").classList.remove("fade-out");
+    });
+
+    eel.expose(say_hello_js);
+
+    function say_hello_js(x) {
+      let myArray = x;
+      c = 0;
+      for (let i = 0; i < myArray.length; i++) {
+        c++;
+        var title = myArray[i].replace('.mp3', '').replace('web/sounds/', '').replace(/_/g, ' ');
+        var loc = myArray[i].replace('web/', '');
+        var audio_block = '<audio class="aud" id="a_' + c + '"><source src="' + loc + '" type="audio/mpeg"></audio>';
+        var trigger_block = "<div class='trigger column is-3-desktop is-6-touch' id='i_" + c + "'><div class='card'><div class='card-content has-text-centered'><strong>" + title + "</strong></div></div>" + audio_block + "</div>";
+        $('#triggers').append(trigger_block);
+        $('.aud').on('ended', function() {
+          var top = $(this).attr('id').replace('a', 'i');
+          var ii = document.getElementById(top);
+          $(ii).removeClass('playing');
+        });
+      }
+
+      $(".trigger").on("click", function() {
+        var iid = $(this).attr('id');
+        var aid = $(this).attr('id').replace('i', 'a');
+        var aa = document.getElementById(aid);
+        var ii = document.getElementById(iid);
+        aa.play();
+        $(this).addClass('playing');
+      });
+
+    }
+    eel.say_hello_py();
+  </script>
+
+</body>
+
+</html>
