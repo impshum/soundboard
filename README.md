@@ -6,7 +6,7 @@ Now with 20 super extra free sound effects.
 
 ![](https://raw.githubusercontent.com/impshum/soundboard/master/python/screenshot.png)
 
-Reads files from Made with Eel (https://github.com/ChrisKnott/Eel).
+Reads files from a directory using the filenames as titles. Made with Eel (https://github.com/ChrisKnott/Eel).
 
 ### Python Instructions
 
