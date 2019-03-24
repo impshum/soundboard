@@ -15,7 +15,7 @@ Reads files from a directory using the filenames as titles. Made with Eel (https
 
       pip install eel
 
-- Dump sound files into web/sounds/ dir (mp3's only).
+- Dump sound files into the ```web/sounds/``` dir (mp3's only).
 - Rename the files replacing spaces with underscores (e.g. Some_cool_sound_byte.mp3)
 - Run it...
 
