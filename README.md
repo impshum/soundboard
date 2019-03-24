@@ -2,15 +2,13 @@
 
 Now with 20 super extra free sound effects.
 
-### HTML Version
-
-Crappy static html/css/js page.
-
 ### Python Version
+
+![](https://raw.githubusercontent.com/impshum/soundboard/master/python/screenshot.png)
 
 Reads files from Made with Eel (https://github.com/ChrisKnott/Eel).
 
-### Instructions
+### Python Instructions
 
 - Install python 3 - https://python.org (make sure to ADD TO PATH)
 - Install eel with pip
@@ -22,3 +20,8 @@ Reads files from Made with Eel (https://github.com/ChrisKnott/Eel).
 - Run it...
 
       python run.py
+
+
+### HTML Version
+
+Crappy static html/css/js page.
