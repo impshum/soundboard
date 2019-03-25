@@ -7,33 +7,18 @@
   <title>Sound Board</title>
   <link rel="stylesheet" href="bulma.min.css">
   <link rel="stylesheet" href="styles.css">
-</head>
-
-<body id="yey">
-
-  <script>
-    document.body.className += ' fade-out';
-  </script>
-
-  <div id="close" onclick="window.open('', '_self', ''); window.close();">EXIT</div>
-
-  <section class="hero is-fullheight">
-    <div class="hero-body">
-      <div class="container">
-        <div id="triggers" class="columns is-multiline is-mobile"></div>
-        <div id="audios"></div>
-      </div>
-    </div>
-  </section>
-
   <script src="jquery.js"></script>
   <script type="text/javascript" src="/eel.js"></script>
+
   <script>
-    function r(f) {
-      /in/.test(document.readyState) ? setTimeout('r(' + f + ')', 9) : f()
-    }
-    r(function() {
-      document.getElementById("yey").classList.remove("fade-out");
+    $(function() {
+      setTimeout(function() {
+        $('#loader').addClass('fade-out');
+        $('.center').fadeOut(150);
+        setTimeout(function() {
+          $('#loader').remove();
+        }, 500);
+      }, 1500);
     });
 
     eel.expose(say_hello_js);
@@ -67,6 +52,32 @@
     }
     eel.say_hello_py();
   </script>
+</head>
+
+<body>
+
+  <script>
+    $('#loader').addClass('fade-out');
+  </script>
+
+  <div id="loader">
+    <div class="center"></div>
+  </div>
+
+
+  <div id="close" onclick="window.open('', '_self', ''); window.close();">EXIT</div>
+
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div id="triggers" class="columns is-multiline is-mobile"></div>
+        <div id="audios"></div>
+      </div>
+    </div>
+  </section>
+
+
+
 
 </body>
 
