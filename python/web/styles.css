@@ -14,19 +14,38 @@
   transition: .5s;
 }
 
-body {
-  transition: .5s opacity;
+html, body {
+  background: #000;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 9999;
   opacity: 1;
-  background: #000;
+  transition: 1s opacity;
 }
 
-body.fade-out {
-  transition: none;
-  opacity: 0;
+
+#loader.fade-out {
+    opacity: 0;
+    transition: 1s opacity;
 }
 
-html {
-  background: #000;
+.center {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -150px;
+   margin-top: -150px;
+   background: url(img/loading.gif);
+   background-size: 300px;
 }
 
 .playing {
@@ -34,7 +53,7 @@ html {
 }
 
 .trigger {
-  opacity: .85;
+  opacity: .9;
 }
 
 .trigger:hover {
