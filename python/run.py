@@ -1,5 +1,4 @@
 import eel
-import time
 import glob
 
 
